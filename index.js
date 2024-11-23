@@ -15,6 +15,11 @@ const store = createStore (reducer);
     if(action.type = 'increment')
     return state.amount+1;
   }
+//   IMMUTABLE STATE
+  if(action.type = 'increment'){
+    return {amount:state.amount+1};
+  }
+  return state
 
 //   To check GLOBAL STATE there is a function is a getState()
 
