@@ -1,19 +1,24 @@
 import { createStore } from "redux";
+// ACTION name constants 
+
+const inc = 'increment';
+const dec = 'decrement';
+const incByAmt = 'incrementByAmount'
 
 // store
 
 const store = createStore (reducer);
 
-const history = [];
+
 
 function increment(){
-  return {type:'increment'};
+  return {type:inc};
 }
 function decrement(){
-  return {type:'decrement'};
+  return {type:dec};
 }
 function incrementByAmount(payload){
-  return {type:'incrementByAmount',payload:payload};
+  return {type:incByAmt,payload:payload};
 }
 
  /*
@@ -23,20 +28,18 @@ function incrementByAmount(payload){
 
 //   By default we call these parametes state and action but we can call it anything we want it 
   function reducer(state={amount:1} , action ){
-    console.log('action---',action)
     // Here we are mutating the state and we are returning the 2 and it is not RIGHT
   /*   if(action.type = 'increment'){
     return state.amount = state.amount+1;
   } */
   //   IMMUTABLE STATE
-  if(action.type === 'increment'){
+  if(action.type === inc){
     return {amount:state.amount + 1};
   }
-  if(action.type === 'incrementByAmount'){
-    console.log('state.amount--',state.amount)
+  if(action.type === incByAmt){
     return {amount:state.amount + action.payload};
   }
-  if(action.type === 'decrement'){
+  if(action.type === dec){
     return {amount:state.amount - 1};
   }
   return state

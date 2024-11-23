@@ -53,3 +53,9 @@ To write again and again action type likely
 > type: "incrementByAmount"
 
 is a tedious task that's the reason we create action creators .
+
+## JSON SERVER 
+
+```npm install -g json-server```
+
+
