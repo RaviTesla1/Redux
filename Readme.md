@@ -26,3 +26,30 @@ Similarily ACTION is also like a event .
 
 In deposit and withdraw we need payload but we dont need in checkBalance . 
 
+
+## SUBSCRIBE 
+It is a special function in a Redux and it runs everytime there will be any change in the state .
+It means whenever reducer runs then subscribe function is called .
+
+
+## Three priciples of Redux 
+
+1. Single source of Truth ( Global state)
+2. Immutable Updates  ( State Read only)
+3. Reducer Should be pure ( No Side effects)
+
+
+## MIDDLEWARES
+
+
+Before dispatching your action and send to the Reducer and if you want to perform any other operation or you want to call some other action so in that scenario we need MIDDLEWARE .
+
+## Thunk 
+
+It delays our action so that we can call our api
+
+## Action Creators 
+To write again and again action type likely 
+> type: "incrementByAmount"
+
+is a tedious task that's the reason we create action creators .
